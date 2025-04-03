@@ -21,6 +21,7 @@ test.describe.serial(`Sequential execution`, async () => {
 
         //Clicking on toggle menu
         await page.locator(`//*[@title="App Launcher"]`).click();
+        await page.waitForLoadState(`domcontentloaded`)
 
         //Clicking on View All button
         await page.locator(`//button[contains(text(),'View All')]`).click();
